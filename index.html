@@ -1,5 +1,4 @@
-<
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -44,21 +43,22 @@
   .nav .right .login{font-size:15px;font-weight:600;}
   .chev{width:14px;height:14px;opacity:.6;}
 
-  /* ---------- hero (full-bleed glass card) ---------- */
-  .hero{position:relative;height:min(620px,82vh);overflow:hidden;}
-  /* Replace this .himg background with your photo: background:url('hero.jpg') center/cover no-repeat; */
+  /* ---------- hero (editorial, full-bleed) ---------- */
+  .hero{position:relative;height:min(640px,86vh);overflow:hidden;}
+  /* Replace .himg background with your photo (same name as the other page) */
   .hero .himg{position:absolute;inset:0;z-index:0;background:url('images/hero.webp') center/cover no-repeat;}
-  .hero .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(10,20,38,.72) 0%,rgba(10,20,38,.35) 42%,rgba(10,20,38,0) 70%);}
-  /* fades the image into the white section below — no visible seam */
-  .hero .blend{position:absolute;left:0;right:0;bottom:-1px;height:230px;z-index:2;background:linear-gradient(to bottom,rgba(255,255,255,0),#fff 92%);pointer-events:none;}
-  .hero .in{position:relative;z-index:3;max-width:1160px;margin:0 auto;height:100%;padding:0 32px;}
-  .hero h1{position:absolute;top:64px;left:32px;max-width:640px;margin:0;color:#fff;font-weight:800;font-size:clamp(38px,5.4vw,64px);line-height:1.02;letter-spacing:-.03em;}
-  .hero .hcard{position:absolute;left:32px;bottom:64px;width:min(460px,80%);background:rgba(255,255,255,.74);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.6);border-radius:22px;padding:28px 30px;box-shadow:0 24px 50px -26px rgba(10,20,38,.45);}
-  .hero .hcard p{margin:0 0 22px;color:#243044;font-size:16px;line-height:1.6;}
+  .hero .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(95deg,rgba(8,16,32,.82) 0%,rgba(8,16,32,.3) 46%,rgba(8,16,32,0) 78%);}
+  .hero .frame{position:absolute;inset:26px;z-index:2;border:1px solid rgba(255,255,255,.32);border-radius:6px;pointer-events:none;}
+  .hero .blend{position:absolute;left:0;right:0;bottom:-1px;height:120px;z-index:3;background:linear-gradient(to bottom,rgba(255,255,255,0),#fff 92%);pointer-events:none;}
+  .hero .in{position:relative;z-index:4;max-width:1160px;margin:0 auto;height:100%;padding:0 64px;display:flex;flex-direction:column;justify-content:center;}
+  .hero .ey{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#9ec3f2;margin:0 0 20px;}
+  .hero h1{font-size:clamp(38px,5.4vw,66px);font-weight:800;line-height:1.02;letter-spacing:-.035em;color:#fff;margin:0 0 20px;max-width:15ch;}
+  .hero .rule{width:56px;height:2px;background:#3f8fe0;margin:0 0 20px;}
+  .hero p{font-size:17px;line-height:1.55;color:rgba(255,255,255,.9);margin:0 0 28px;max-width:460px;}
   .hero .hbtns{display:flex;gap:12px;flex-wrap:wrap;}
   .hero .pill{display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;border-radius:8px;padding:14px 26px;text-decoration:none;transition:.2s;}
-  .hero .pill-blue{background:#1A6BCC;color:#fff;} .hero .pill-blue:hover{background:#12508f;}
-  .hero .pill-outline{background:#fff;color:#1A6BCC;border:1.5px solid #cfe0f7;} .hero .pill-outline:hover{background:#eef4fc;border-color:#1A6BCC;}
+  .hero .pill-white{background:#fff;color:#12508f;} .hero .pill-white:hover{background:#eef4fc;}
+  .hero .pill-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6);} .hero .pill-outline:hover{background:rgba(255,255,255,.12);}
 
   /* ---------- story block ---------- */
   .story{padding:80px 0 96px;}
@@ -120,9 +120,9 @@
   @media(max-width:900px){
     .nav .links{display:none;}
     .hero{height:min(560px,86vh);}
-    .hero h1{left:24px;right:24px;top:44px;font-size:clamp(32px,7vw,46px);}
-    .hero .hcard{left:16px;right:16px;width:auto;bottom:24px;}
-    .hero .in{padding:0 16px;}
+    .hero .in{padding:0 26px;}
+    .hero .frame{inset:14px;}
+    .hero h1{font-size:clamp(32px,7vw,46px);}
     .values{padding:36px 24px;}
     .values .grid{grid-template-columns:1fr;}
     .vlist{grid-template-columns:1fr;}
@@ -297,15 +297,16 @@
 <header class="hero">
   <div class="himg"></div>
   <div class="scrim"></div>
+  <div class="frame"></div>
   <div class="blend"></div>
   <div class="in">
+    <p class="ey">The EduHubSpot story</p>
     <h1>We are mentors, not just instructors</h1>
-    <div class="hcard">
-      <p>At EduHubSpot, we’re more than a training provider — we’re your career growth partners. You don’t just get classes; you get mentorship from real project leaders who’ve been where you are and can show you the fastest path to success.</p>
-      <div class="hbtns">
-        <a class="pill pill-blue" href="#">View all courses</a>
-        <a class="pill pill-outline" href="#">Talk to a mentor</a>
-      </div>
+    <div class="rule"></div>
+    <p>At EduHubSpot, we’re more than a training provider — you get mentorship from real project leaders who’ve been where you are, and can show you the fastest path to success.</p>
+    <div class="hbtns">
+      <a class="pill pill-white" href="#">View all courses</a>
+      <a class="pill pill-outline" href="#">Talk to a mentor</a>
     </div>
   </div>
 </header>
