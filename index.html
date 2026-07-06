@@ -262,6 +262,33 @@
 @media(max-width:900px){.masterminds .grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:420px){.masterminds .grid{grid-template-columns:1fr 1fr;gap:14px;}}
 </style>
+<style>
+/* ===== Our Story photos (1 or 2 per card) ===== */
+.ehs-story .photos{display:grid;grid-template-columns:1fr;gap:10px;margin:0 0 20px;}
+.ehs-story .photos.two{grid-template-columns:1fr 1fr;}
+.ehs-story .photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;display:block;background:linear-gradient(135deg,#eef4fc,#dbe6f6);}
+.ehs-story figure.photos{margin:0 0 20px;}
+.ehs-story .photos figcaption{grid-column:1/-1;font-size:12.5px;color:var(--muted);margin-top:2px;font-style:italic;}
+@media(max-width:520px){.ehs-story .photos.two{grid-template-columns:1fr;}}
+</style>
+<style>
+/* ===== Our Story bento (3-image cluster) ===== */
+.ehs-story .bento{display:grid;grid-template-columns:1.4fr 1fr;grid-auto-rows:1fr;gap:10px;margin:0 0 20px;aspect-ratio:16/10;}
+.ehs-story .bento img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block;background:linear-gradient(135deg,#eef4fc,#dbe6f6);}
+.ehs-story .bento .b1{grid-row:1/3;}
+@media(max-width:520px){
+  .ehs-story .bento{aspect-ratio:auto;grid-template-columns:1fr 1fr;grid-template-rows:170px 120px;}
+  .ehs-story .bento .b1{grid-row:1;grid-column:1/3;}
+}
+</style>
+<style>
+/* ===== Our Story stack3 (1 wide top + 2 below) ===== */
+.ehs-story .stack3{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 20px;}
+.ehs-story .stack3 img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block;background:linear-gradient(135deg,#eef4fc,#dbe6f6);}
+.ehs-story .stack3 .s1{grid-column:1/3;aspect-ratio:16/7;}
+.ehs-story .stack3 .s2,.ehs-story .stack3 .s3{aspect-ratio:4/3;}
+@media(max-width:520px){.ehs-story .stack3{grid-template-columns:1fr;}.ehs-story .stack3 .s1{grid-column:1;aspect-ratio:16/9;}}
+</style>
 </head>
 <body>
 
@@ -338,92 +365,86 @@
     <h2>Our story</h2>
   </div>
   <div class="wrap">
-
-    <!-- LEFT: sticky rail -->
     <aside class="aside">
       <p class="bigyr" data-bigyr>2012</p>
       <p class="bigttl" data-bigttl>The Spark</p>
       <nav class="rail">
         <div class="track"><div class="fill" data-fill></div></div>
-        <p class="mk on" data-nav>2012 · The Spark</p>
-        <p class="mk" data-nav>2013 · The Struggle</p>
-        <p class="mk" data-nav>2016 · EduHubSpot is Born</p>
-        <p class="mk" data-nav>2020 · Going Global</p>
-        <p class="mk" data-nav>Today · Still Building</p>
+        <p class="mk on" data-nav>2012 &middot; The Spark</p>
+        <p class="mk" data-nav>2013 &middot; The Struggle</p>
+        <p class="mk" data-nav>2016 &middot; EduHubSpot is Born</p>
+        <p class="mk" data-nav>2017 &middot; The First Class</p>
+        <p class="mk" data-nav>2020 &middot; Going Global</p>
+        <p class="mk" data-nav>Today &middot; Still Building</p>
       </nav>
     </aside>
-
-    <!-- RIGHT: scrolling entries -->
     <div class="entries">
 
       <article class="entry" data-entry data-year="2012" data-title="The Spark">
-        <p class="e-yr">2012 · The Spark</p>
+        <p class="e-yr">2012 &middot; The Spark</p>
         <h3 class="e-ttl">Where it all began</h3>
-        <p class="e-body">It started in 2012, with a single goal: pass the PMP. Varun grew up in a middle-class family in India, the son of a retired mathematics professor — which, he’ll tell you with a grin, is exactly where the teaching came from. He was in his late twenties when he cleared the exam. It felt like a finish line. It turned out to be a starting one.</p>
-        <div class="photo">
-          <img src="images/story-2012.webp" alt="EduHubSpot 2012">
-        </div>
-        <div class="quote">
-          <p>“My father taught mathematics his whole life. I think I always knew I’d end up teaching too.”</p>
-          <p class="who">Varun</p>
-          <p class="role">Co-founder, EduHubSpot</p>
-        </div>
+        <p class="e-body">It started in 2012 with one goal: pass the PMP. Varun — the son of a retired mathematics professor — was in his late twenties when he cleared it. The celebration was simple and unforgettable, and with it came a quiet realisation: this exam wasn’t the finish line. It was the start of everything.</p>
+        <figure class="photos">
+          <img src="images/story-2012-pmp.webp" alt="Celebrating the day Varun passed the PMP">
+          <figcaption>’The day I passed the PMP.’</figcaption>
+        </figure>
+        <div class="quote"><p>’My father taught mathematics his whole life. I think I always knew I’d end up teaching too.’</p><p class="who">Varun</p><p class="role">Co-founder, EduHubSpot</p></div>
       </article>
 
       <article class="entry" data-entry data-year="2013" data-title="The Struggle">
-        <p class="e-yr">2013 · The Struggle</p>
-        <h3 class="e-ttl">“Varun, you’re too young”</h3>
-        <p class="e-body">Certification in hand, Varun knocked on the door of every training company he could find — big and small — asking for one chance to teach. The answer was almost always the same: too young. He didn’t lose hope. After a year of trying, a call finally came, and he delivered his very first training in Cleveland, Ohio. The students loved it. There was only one problem — he never got paid. The company quietly used newcomers like him and never paid them. He kept teaching anyway, because he wasn’t chasing a paycheck yet. He was building a name.</p>
-        <div class="photo">
-          <img src="images/story-2013.webp" alt="EduHubSpot 2013">
+        <p class="e-yr">2013 &middot; The Struggle</p>
+        <h3 class="e-ttl">’Varun, you’re too young’</h3>
+        <p class="e-body">Certification in hand, Varun knocked on the door of every training company he could find — and was turned away, again and again: too young. He refused to give up. After a year, a call finally came, and he delivered his first-ever training in Cleveland, Ohio. The students loved it. He never got paid — the company quietly used newcomers — but he kept teaching anyway. He wasn’t chasing a paycheck yet. He was building a name.</p>
+        <div class="bento">
+          <img class="b1" src="images/story-2013-1.webp" alt="EduHubSpot early training">
+          <img class="b2" src="images/story-2013-2.webp" alt="EduHubSpot early training">
+          <img class="b3" src="images/story-2013-3.webp" alt="EduHubSpot early training">
         </div>
-        <div class="quote">
-          <p>“‘Varun, you are too young, sorry.’ I heard that a lot. So I just kept showing up.”</p>
-          <p class="who">Varun</p>
-          <p class="role">Co-founder, EduHubSpot</p>
-        </div>
+        <div class="quote"><p>’’Varun, you are too young, sorry.’ I heard that a lot. So I just kept showing up.’</p><p class="who">Varun</p><p class="role">Co-founder, EduHubSpot</p></div>
       </article>
 
       <article class="entry" data-entry data-year="2016" data-title="EduHubSpot">
-        <p class="e-yr">2016 · EduHubSpot is Born</p>
+        <p class="e-yr">2016 &middot; EduHubSpot is Born</p>
         <h3 class="e-ttl">Two friends, one vision</h3>
-        <p class="e-body">The money was coming now — but Varun wanted more than income. He wanted to build something that would outlast him, and he knew he couldn’t do it alone. So he sat down with his best friend and roommate, Chirag, a software developer, and laid out the vision. In 2016, EduHubSpot was born. Chirag got his hands dirty in the code; Varun went to work on the teaching — recording lessons, breaking down the hardest concepts, showing up on YouTube. Then life moved fast: thousands of students, all over the world, and a lot of miles travelled to reach them.</p>
-        <div class="photo">
-          <img src="images/story-2016.webp" alt="EduHubSpot 2016">
+        <p class="e-body">The money was coming, but Varun wanted to build something that would outlast him — and he couldn’t do it alone. He sat down with his best friend and roommate Chirag, a software developer, and in 2016, EduHubSpot was born. Chirag got his hands dirty in the code; Varun built the teaching — recording lesson after lesson in a green-screen studio they rigged up in their own basement. From that basement, the first thousands of students found them.</p>
+        <div class="stack3">
+          <img class="s1" src="images/story-2016-studio.webp" alt="The basement green-screen studio in the early days">
+          <img class="s2" src="images/story-2016-coding.webp" alt="Chirag building the EduHubSpot platform">
+          <img class="s3" src="images/story-2016-3.webp" alt="EduHubSpot in the early days">
         </div>
-        <div class="quote">
-          <p>“I wanted to build a legacy — and I knew I couldn’t do it alone. That’s when I called Chirag.”</p>
-          <p class="who">Varun</p>
-          <p class="role">Co-founder, EduHubSpot</p>
-        </div>
+        <div class="quote"><p>’I wanted to build a legacy — and I knew I couldn’t do it alone. That’s when I called Chirag.’</p><p class="who">Varun</p><p class="role">Co-founder, EduHubSpot</p></div>
+      </article>
+
+      <article class="entry" data-entry data-year="2017" data-title="First Class">
+        <p class="e-yr">2017 &middot; The First Class</p>
+        <h3 class="e-ttl">The first class</h3>
+        <p class="e-body">Before the studio and the thousands online, there was one small room — a projector, a stack of PMP guides, and a handful of people who took a chance on a brand-new name. When they held up their certificates, EduHubSpot stopped being an idea. It became a school.</p>
+        <figure class="photos">
+          <img src="images/story-2017-firstclass.webp" alt="EduHubSpot’s first class holding their certificates">
+          <figcaption>Our very first class.</figcaption>
+        </figure>
+        <div class="quote"><p>’That first class — a handful of certificates in a small room — is still one of the proudest photos I have.’</p><p class="who">Varun</p><p class="role">Co-founder, EduHubSpot</p></div>
       </article>
 
       <article class="entry" data-entry data-year="2020" data-title="Going Global">
-        <p class="e-yr">2020 · Going Global</p>
-        <h3 class="e-ttl">When the world went online</h3>
-        <p class="e-body">Then 2020 arrived, and the pandemic changed everything. It was a hard, uncertain time — people everywhere were losing their jobs. So EduHubSpot did something about it: they grew the team, bringing on people who’d been let go, and rebuilt for a new, online world. The trainings went global. Love — and more than a few gifts — arrived from students on every continent. They expanded the catalog, opened new offices in the US and Saudi Arabia, and partnered with mentors who put people first. Through all of it, they never forgot their roots.</p>
-        <div class="photo">
-          <img src="images/story-2020.webp" alt="EduHubSpot 2020">
+        <p class="e-yr">2020 &middot; Going Global</p>
+        <h3 class="e-ttl">The world went online — and we went everywhere</h3>
+        <p class="e-body">The trainings had gone global, and so had the team — Varun crossing borders and airports to teach in person, then moving the whole company online when the pandemic arrived. Life kept moving too: a new baby on his lap while a room full of learners waved back from the laptop screen. Growth and home, at exactly the same time.</p>
+        <div class="photos two">
+          <img src="images/story-2020-travel.webp" alt="Travelling to deliver trainings">
+          <img src="images/story-2020-online.webp" alt="Teaching online while dad life continued">
         </div>
-        <div class="quote">
-          <p>“Be simple, and do whatever it takes to provide the best training in the world.”</p>
-          <p class="who">Varun &amp; Chirag</p>
-          <p class="role">Co-founders, EduHubSpot</p>
-        </div>
+        <div class="quote"><p>’Be simple, and do whatever it takes to provide the best training in the world.’</p><p class="who">Varun &amp; Chirag</p><p class="role">Co-founders, EduHubSpot</p></div>
       </article>
 
       <article class="entry" data-entry data-year="Today" data-title="Today">
-        <p class="e-yr">Today · Still Building</p>
-        <h3 class="e-ttl">Still teaching. Still building.</h3>
-        <p class="e-body">Today, EduHubSpot is a PMI Authorized Training Partner that has guided 20,000+ professionals to their certifications — and the careers they’d always dreamed of. The catalog has grown far beyond PMP, into agile, risk, Six Sigma, and a new generation of AI, data, and leadership skills, all taught by mentors who’ve walked the path themselves. Two friends, one vision, and the same promise they made at the start: keep it simple, and do whatever it takes. The story is still being written.</p>
-        <div class="photo">
-          <img src="images/story-today.webp" alt="EduHubSpot today">
-        </div>
-        <div class="quote">
-          <p>“Chirag and I are still best friends — chasing the same thing we always were.”</p>
-          <p class="who">Varun</p>
-          <p class="role">Co-founder, EduHubSpot</p>
-        </div>
+        <p class="e-yr">Today &middot; Still Building</p>
+        <h3 class="e-ttl">From a basement to a global classroom</h3>
+        <p class="e-body">The basement green-screen became a real studio and a real team. Today EduHubSpot is a PMI Authorized Training Partner that has guided 20,000+ professionals to the careers they’d always dreamed of — still taught by mentors who’ve walked the path, still built by two friends chasing the same thing they always were.</p>
+        <figure class="photos">
+          <img src="images/story-today-studio.webp" alt="The EduHubSpot studio and team today">
+        </figure>
+        <div class="quote"><p>’Chirag and I are still best friends — chasing the same thing we always were.’</p><p class="who">Varun</p><p class="role">Co-founder, EduHubSpot</p></div>
       </article>
 
     </div>
