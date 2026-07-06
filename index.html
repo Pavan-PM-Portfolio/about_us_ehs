@@ -43,22 +43,20 @@
   .nav .right .login{font-size:15px;font-weight:600;}
   .chev{width:14px;height:14px;opacity:.6;}
 
-  /* ---------- hero (editorial, full-bleed) ---------- */
-  .hero{position:relative;height:min(640px,86vh);overflow:hidden;}
-  /* Replace .himg background with your photo (same name as the other page) */
+  /* ---------- hero (editorial, light — blends with the white page) ---------- */
+  .hero{position:relative;height:min(640px,86vh);overflow:hidden;background:#fff;}
   .hero .himg{position:absolute;inset:0;z-index:0;background:url('images/hero.webp') center/cover no-repeat;}
-  .hero .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(95deg,rgba(8,16,32,.82) 0%,rgba(8,16,32,.3) 46%,rgba(8,16,32,0) 78%);}
-  .hero .frame{position:absolute;inset:26px;z-index:2;border:1px solid rgba(255,255,255,.32);border-radius:6px;pointer-events:none;}
-  .hero .blend{position:absolute;left:0;right:0;bottom:-1px;height:120px;z-index:3;background:linear-gradient(to bottom,rgba(255,255,255,0),#fff 92%);pointer-events:none;}
-  .hero .in{position:relative;z-index:4;max-width:1160px;margin:0 auto;height:100%;padding:0 64px;display:flex;flex-direction:column;justify-content:center;}
-  .hero .ey{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#9ec3f2;margin:0 0 20px;}
-  .hero h1{font-size:clamp(38px,5.4vw,66px);font-weight:800;line-height:1.02;letter-spacing:-.035em;color:#fff;margin:0 0 20px;max-width:15ch;}
-  .hero .rule{width:56px;height:2px;background:#3f8fe0;margin:0 0 20px;}
-  .hero p{font-size:17px;line-height:1.55;color:rgba(255,255,255,.9);margin:0 0 28px;max-width:460px;}
+  .hero .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#fff 0%,#fff 24%,rgba(255,255,255,.72) 42%,rgba(255,255,255,0) 64%);}
+  .hero .blend{position:absolute;left:0;right:0;bottom:-1px;height:150px;z-index:2;background:linear-gradient(to bottom,rgba(255,255,255,0),#fff 92%);pointer-events:none;}
+  .hero .in{position:relative;z-index:3;max-width:1160px;margin:0 auto;height:100%;padding:0 64px;display:flex;flex-direction:column;justify-content:center;}
+  .hero .ey{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#1A6BCC;margin:0 0 20px;}
+  .hero h1{font-size:clamp(38px,5.4vw,66px);font-weight:800;line-height:1.02;letter-spacing:-.035em;color:#111722;margin:0 0 20px;max-width:15ch;}
+  .hero .rule{width:56px;height:2px;background:#1A6BCC;margin:0 0 20px;}
+  .hero p{font-size:17px;line-height:1.55;color:#4a5261;margin:0 0 28px;max-width:440px;}
   .hero .hbtns{display:flex;gap:12px;flex-wrap:wrap;}
   .hero .pill{display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;border-radius:8px;padding:14px 26px;text-decoration:none;transition:.2s;}
-  .hero .pill-white{background:#fff;color:#12508f;} .hero .pill-white:hover{background:#eef4fc;}
-  .hero .pill-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6);} .hero .pill-outline:hover{background:rgba(255,255,255,.12);}
+  .hero .pill-blue{background:#1A6BCC;color:#fff;} .hero .pill-blue:hover{background:#12508f;}
+  .hero .pill-outline{background:#fff;color:#1A6BCC;border:1.5px solid #cfe0f7;} .hero .pill-outline:hover{background:#eef4fc;border-color:#1A6BCC;}
 
   /* ---------- story block ---------- */
   .story{padding:80px 0 96px;}
@@ -121,8 +119,9 @@
     .nav .links{display:none;}
     .hero{height:min(560px,86vh);}
     .hero .in{padding:0 26px;}
-    .hero .frame{inset:14px;}
     .hero h1{font-size:clamp(32px,7vw,46px);}
+    .hero p{max-width:100%;}
+    .hero .scrim{background:linear-gradient(90deg,#fff 0%,#fff 50%,rgba(255,255,255,.5) 74%,rgba(255,255,255,0) 100%);}
     .values{padding:36px 24px;}
     .values .grid{grid-template-columns:1fr;}
     .vlist{grid-template-columns:1fr;}
@@ -297,15 +296,14 @@
 <header class="hero">
   <div class="himg"></div>
   <div class="scrim"></div>
-  <div class="frame"></div>
   <div class="blend"></div>
   <div class="in">
     <p class="ey">The EduHubSpot story</p>
-    <h1>We are mentors, not just instructors</h1>
+    <h1>We are Mentors,<br>Not Instructors</h1>
     <div class="rule"></div>
     <p>At EduHubSpot, we’re more than a training provider — you get mentorship from real project leaders who’ve been where you are, and can show you the fastest path to success.</p>
     <div class="hbtns">
-      <a class="pill pill-white" href="#">View all courses</a>
+      <a class="pill pill-blue" href="#">View all courses</a>
       <a class="pill pill-outline" href="#">Talk to a mentor</a>
     </div>
   </div>
