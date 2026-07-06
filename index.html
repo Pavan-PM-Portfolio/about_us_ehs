@@ -374,11 +374,15 @@ html{scroll-snap-type:y proximity;}
 .ehs-story .screen-era.stack{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1.25fr 1fr;gap:5px;}
 .ehs-story .screen-era.stack .s1{grid-column:1/3;}
 /* subtitles */
-.ehs-story .story-scene::after{content:"";position:absolute;left:0;right:0;bottom:0;height:24%;background:linear-gradient(to top,rgba(6,8,14,.6),transparent);z-index:1;pointer-events:none;}
-.ehs-story .subs{position:absolute;left:0;right:0;bottom:3%;z-index:2;height:0;}
-.ehs-story .sub{position:absolute;left:8%;right:8%;bottom:0;opacity:0;transition:opacity 1s ease;text-align:center;color:#f3e9d6;font-size:clamp(15px,1.7vw,23px);font-weight:600;line-height:1.3;text-shadow:0 2px 14px rgba(0,0,0,.9);}
+.ehs-story .story-scene::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(to top,rgba(6,8,14,.8),rgba(6,8,14,.2) 62%,transparent);z-index:1;pointer-events:none;}
+
+.ehs-story .subs{position:absolute;left:0;right:0;bottom:7%;z-index:3;height:0;}
+.ehs-story .sub{position:absolute;left:9%;right:9%;bottom:0;opacity:0;transition:opacity 1s ease;text-align:center;}
+.ehs-story .sub .yr{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#cba86a;font-weight:700;margin-bottom:9px;}
+.ehs-story .sub .h{display:block;font-family:'Fraunces',Georgia,serif;font-size:clamp(20px,2vw,30px);font-weight:500;color:#f4ecdd;margin-bottom:11px;line-height:1.1;}
+.ehs-story .sub .b{display:block;font-size:clamp(14px,1.05vw,17px);line-height:1.55;color:#e2d9ca;text-shadow:0 2px 12px rgba(0,0,0,.85);max-width:900px;margin:0 auto;}
 .ehs-story .sub.active{opacity:1;}
-.ehs-story .sub .yr{display:block;font-size:.62em;letter-spacing:.14em;text-transform:uppercase;color:#cba86a;margin-bottom:7px;font-weight:700;}
+
 </style>
 </head>
 <body>
@@ -463,12 +467,18 @@ html{scroll-snap-type:y proximity;}
         <div class="screen-era one"><img src="images/story-today-studio.webp" alt=""></div>
       </div>
       <div class="subs">
-        <p class="sub active"><span class="yr">2012 · The Spark</span>Where it all began</p>
-        <p class="sub"><span class="yr">2013 · The Struggle</span>’Varun, you’re too young’</p>
-        <p class="sub"><span class="yr">2016 · EduHubSpot is Born</span>Two friends, one vision</p>
-        <p class="sub"><span class="yr">2017 · The First Class</span>The first class</p>
-        <p class="sub"><span class="yr">2020 · Going Global</span>The world went online — and we went everywhere</p>
-        <p class="sub"><span class="yr">Today · Still Building</span>From a basement to a global classroom</p>
+        <p class="sub active"><span class="yr">2012 · The Spark</span><span class="h">Where it all began</span><span class="b">It started in 2012 with one goal: pass the PMP. Varun — the son of a retired mathematics professor — was in his late twenties when he cleared it. The celebration was simple and unforgettable, and with it came a quiet realisation: this exam wasn’t the finish line. It was the start of everything.</span></p>
+        <p class="sub"><span class="yr">2013 · The Struggle</span><span class="h">’Varun, you’re too young’</span><span class="b">Certification in hand, Varun knocked on the door of every training company he could find — and was turned away, again and again: too young. He refused to give up. A year later a call finally came, and he delivered his first-ever training in Cleveland, Ohio. The students loved it. He never got paid, but he kept teaching anyway — he wasn’t chasing a paycheck yet, he was building a name.</span></p>
+        <p class="sub"><span class="yr">2016 · EduHubSpot is Born</span><span class="h">Two friends, one vision</span><span class="b">The money was coming, but Varun wanted to build something that would outlast him — and he couldn’t do it alone. He sat down with his best friend and roommate Chirag, a software developer, and EduHubSpot was born. Chirag got his hands dirty in the code; Varun recorded lesson after lesson in a green-screen studio they rigged up in their own basement. From that basement, the first thousands of students found them.</span></p>
+        <p class="sub"><span class="yr">2017 · The First Class</span><span class="h">The first class</span><span class="b">Before the studio and the thousands online, there was one small room — a projector, a stack of PMP guides, and a handful of people who took a chance on a brand-new name. When they held up their certificates, EduHubSpot stopped being an idea. It became a school.</span></p>
+        <p class="sub"><span class="yr">2020 · Going Global</span><span class="h">The world went online</span><span class="b">The trainings had gone global, and so had the team — Varun crossing borders and airports to teach in person, then moving the whole company online when the pandemic arrived. Life kept moving too: a new baby on his lap while a room full of learners waved back from the laptop screen. Growth and home, at exactly the same time.</span></p>
+        <p class="sub"><span class="yr">Today · Still Building</span><span class="h">From a basement to a global classroom</span><span class="b">The basement green-screen became a real studio and a real team. Today EduHubSpot is a PMI Authorized Training Partner that has guided 20,000+ professionals to the careers they’d always dreamed of — still taught by mentors who’ve walked the path, still built by two friends chasing the same thing they always were.</span></p>
+      </div>
+        <div class="story-line"><span class="yr">2013 · The Struggle</span><h3 class="h">’Varun, you’re too young’</h3><p class="b">Certification in hand, Varun knocked on the door of every training company he could find — and was turned away, again and again: too young. He refused to give up. A year later a call finally came, and he delivered his first-ever training in Cleveland, Ohio. The students loved it. He never got paid, but he kept teaching anyway. He wasn’t chasing a paycheck yet — he was building a name.</p></div>
+        <div class="story-line"><span class="yr">2016 · EduHubSpot is Born</span><h3 class="h">Two friends, one vision</h3><p class="b">The money was coming, but Varun wanted to build something that would outlast him — and he couldn’t do it alone. He sat down with his best friend and roommate Chirag, a software developer, and EduHubSpot was born. Chirag got his hands dirty in the code; Varun recorded lesson after lesson in a green-screen studio they rigged up in their own basement. From that basement, the first thousands of students found them.</p></div>
+        <div class="story-line"><span class="yr">2017 · The First Class</span><h3 class="h">The first class</h3><p class="b">Before the studio and the thousands online, there was one small room — a projector, a stack of PMP guides, and a handful of people who took a chance on a brand-new name. When they held up their certificates, EduHubSpot stopped being an idea. It became a school.</p></div>
+        <div class="story-line"><span class="yr">2020 · Going Global</span><h3 class="h">The world went online</h3><p class="b">The trainings had gone global, and so had the team — Varun crossing borders and airports to teach in person, then moving the whole company online when the pandemic arrived. Life kept moving too: a new baby on his lap while a room full of learners waved back from the laptop screen. Growth and home, at exactly the same time.</p></div>
+        <div class="story-line"><span class="yr">Today · Still Building</span><h3 class="h">From a basement to a global classroom</h3><p class="b">The basement green-screen became a real studio and a real team. Today EduHubSpot is a PMI Authorized Training Partner that has guided 20,000+ professionals to the careers they’d always dreamed of — still taught by mentors who’ve walked the path, still built by two friends chasing the same thing they always were.</p></div>
       </div>
     </div>
   </div>
