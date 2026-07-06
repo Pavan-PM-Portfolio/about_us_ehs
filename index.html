@@ -328,6 +328,23 @@
 .ehs-story .lensglow{background:radial-gradient(circle,#7fb1f2,transparent 70%);opacity:.65;}
 .ehs-story .beam{background:linear-gradient(90deg,rgba(120,170,255,.30),transparent 84%);}
 </style>
+<style>
+/* ===== Vision & Mission — heading + image left, statement card right ===== */
+.ehs-vm .vm-row{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center;}
+.ehs-vm .vm-lead h3{font-size:clamp(30px,3.8vw,48px);font-weight:800;line-height:1.06;letter-spacing:-.03em;margin:0 0 18px;color:#111722;}
+.ehs-vm .vm-lead h3 .acc{color:#1A6BCC;}
+.ehs-vm .vm-lead p{color:#5b6472;font-size:16.5px;line-height:1.6;margin:0 0 26px;max-width:44ch;}
+.ehs-vm .vm-img{border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:linear-gradient(150deg,#e9eef6,#d7e0ee);display:grid;place-items:center;color:#a9b7cc;}
+.ehs-vm .vm-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.ehs-vm .vm-img svg{width:46px;height:46px;}
+.ehs-vm .vm-card{border:1px solid #e7ebf1;border-radius:22px;padding:40px;box-shadow:0 30px 60px -40px rgba(15,31,61,.3);}
+.ehs-vm .vm-lbl{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#12508f;margin:0 0 12px;}
+.ehs-vm .vm-ic{width:30px;height:30px;border-radius:9px;background:#eef4fc;color:#1A6BCC;display:grid;place-items:center;}
+.ehs-vm .vm-ic svg{width:16px;height:16px;}
+.ehs-vm .vm-stmt{font-size:16px;line-height:1.65;color:#3a4353;margin:0;}
+.ehs-vm .vm-card hr{border:0;border-top:1px solid #eceff4;margin:26px 0;}
+@media(max-width:860px){.ehs-vm .vm-row{grid-template-columns:1fr;gap:30px;}.ehs-vm .vm-card{padding:30px 26px;}}
+</style>
 </head>
 <body>
 
@@ -337,7 +354,6 @@
   <div class="scrim"></div>
   <div class="blend"></div>
   <div class="in">
-    <p class="ey">The EduHubSpot story</p>
     <h1>We are Mentors,<br>Not Instructors</h1>
     <div class="rule"></div>
     <p>At EduHubSpot, we’re more than a training provider — you get mentorship from real project leaders who’ve been where you are, and can show you the fastest path to success.</p>
@@ -352,7 +368,6 @@
 <section class="story">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">About us</p>
       <h2>Who we are</h2>
     </div>
     <div class="col">
@@ -365,22 +380,22 @@
 <!-- ================= VISION & MISSION ================= -->
 <section class="ehs-vm">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">What drives us</p>
-      <h2>Vision &amp; mission</h2>
-    </div>
-    <div class="grid">
-      <div class="media">
-        <div class="photo">
-          <img src="images/vision-mission.webp" alt="EduHubSpot">
-        </div>
+    <div class="vm-row">
+      <div class="vm-lead">
+        <h3>The <span class="acc">vision &amp; mission</span> behind EduHubSpot</h3>
+        <p>Two friends started with one belief: great training should be simple, personal, and built around the learner. Here’s what still drives every course we build.</p>
+        <div class="vm-img"><img src="images/vision-mission.webp" alt="EduHubSpot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div>
       </div>
-      <div class="statements">
-        <p class="ey">Our vision</p>
-        <p class="stmt">To guide a period of global leadership in Career-Advancement Certification Programmes, EduHubSpot aimed at driving learners from across the world to achieve their career dreams through our cutting-edge learning programmes, dedicated mentors, and continuous support.</p>
+      <div class="vm-card">
+        <div class="vm-grp">
+          <p class="vm-lbl"><span class="vm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>Our Vision</p>
+          <p class="vm-stmt">To guide a period of global leadership in Career-Advancement Certification Programmes, EduHubSpot aimed at driving learners from across the world to achieve their career dreams through our cutting-edge learning programmes, dedicated mentors, and continuous support.</p>
+        </div>
         <hr>
-        <p class="ey">Our mission</p>
-        <p class="stmt">Our mission is to equip the working professionals through innovative expertise, knowledge, and experience which are vital for the global Project Management Workforce to attain their desired outcomes and remarkable success.</p>
+        <div class="vm-grp">
+          <p class="vm-lbl"><span class="vm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m15 9-3.5 3.5L9 15l1.5-4.5L15 9z"/></svg></span>Our Mission</p>
+          <p class="vm-stmt">Our mission is to equip the working professionals through innovative expertise, knowledge, and experience which are vital for the global Project Management Workforce to attain their desired outcomes and remarkable success.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -400,7 +415,6 @@
 <!-- ================= OUR STORY ================= -->
 <section class="ehs-story" data-sticky>
   <div class="sec-head">
-    <p class="eyebrow">Since 2012</p>
     <h2>Our story</h2>
   </div>
   <div class="wrap">
