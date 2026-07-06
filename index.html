@@ -357,14 +357,15 @@
 <style>.ehs-story .wrap{grid-template-columns:1fr;}</style>
 <style>
 html{scroll-snap-type:y proximity;}
+.ehs-story .snap{position:absolute;left:0;width:1px;height:1px;pointer-events:none;scroll-snap-align:start;scroll-snap-stop:always;}
 /* Our Story = pinned cinema: era photos on the screen, story as subtitles */
-.ehs-story{position:relative;height:480vh;padding:0 !important;background:#0a0d16 !important;scroll-snap-align:start;scroll-snap-stop:always;}
+.ehs-story{position:relative;height:640vh;padding:0 !important;background:#0a0d16 !important;}
 .ehs-story .story-pin{position:sticky;top:0;height:100vh;overflow:hidden;background:#0a0d16;}
 .ehs-story .story-scene{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(100vw,200vh);aspect-ratio:2/1;}
 .ehs-story .story-bg{position:absolute;inset:0;z-index:0;background:url('images/story-bg.webp') center/cover,#0a0d16;}
 /* the movie screen area (percent of the 2:1 scene) */
 .ehs-story .screen{position:absolute;left:53%;top:17%;width:41%;height:46%;z-index:1;box-shadow:inset 0 0 46px rgba(0,0,0,.3);overflow:hidden;}
-.ehs-story .screen-era{position:absolute;inset:0;opacity:0;transition:opacity .5s ease;}
+.ehs-story .screen-era{position:absolute;inset:0;opacity:0;transition:opacity .85s ease;}
 .ehs-story .screen-era.active{opacity:1;}
 .ehs-story .screen-era img{width:100%;height:100%;min-width:0;min-height:0;object-fit:cover;display:block;border-radius:0;filter:brightness(.96) contrast(1.02) sepia(.08);}
 .ehs-story .screen-era.two{display:grid;grid-template-columns:1fr 1fr;gap:5px;}
@@ -375,7 +376,7 @@ html{scroll-snap-type:y proximity;}
 /* subtitles */
 .ehs-story .story-scene::after{content:"";position:absolute;left:0;right:0;bottom:0;height:24%;background:linear-gradient(to top,rgba(6,8,14,.6),transparent);z-index:1;pointer-events:none;}
 .ehs-story .subs{position:absolute;left:0;right:0;bottom:3%;z-index:2;height:0;}
-.ehs-story .sub{position:absolute;left:8%;right:8%;bottom:0;opacity:0;transition:opacity .5s ease;text-align:center;color:#f3e9d6;font-size:clamp(15px,1.7vw,23px);font-weight:600;line-height:1.3;text-shadow:0 2px 14px rgba(0,0,0,.9);}
+.ehs-story .sub{position:absolute;left:8%;right:8%;bottom:0;opacity:0;transition:opacity .85s ease;text-align:center;color:#f3e9d6;font-size:clamp(15px,1.7vw,23px);font-weight:600;line-height:1.3;text-shadow:0 2px 14px rgba(0,0,0,.9);}
 .ehs-story .sub.active{opacity:1;}
 .ehs-story .sub .yr{display:block;font-size:.62em;letter-spacing:.14em;text-transform:uppercase;color:#cba86a;margin-bottom:7px;font-weight:700;}
 </style>
@@ -449,6 +450,7 @@ html{scroll-snap-type:y proximity;}
 
 <!-- ================= OUR STORY ================= -->
 <section class="ehs-story pinned" data-pin>
+  <div class="snap" style="top:45vh"></div><div class="snap" style="top:135vh"></div><div class="snap" style="top:225vh"></div><div class="snap" style="top:315vh"></div><div class="snap" style="top:405vh"></div><div class="snap" style="top:495vh"></div>
   <div class="story-pin">
     <div class="story-scene">
       <div class="story-bg"></div>
