@@ -289,6 +289,45 @@
 .ehs-story .stack3 .s2,.ehs-story .stack3 .s3{aspect-ratio:4/3;}
 @media(max-width:520px){.ehs-story .stack3{grid-template-columns:1fr;}.ehs-story .stack3 .s1{grid-column:1;aspect-ratio:16/9;}}
 </style>
+<style>
+/* ===== Our Story — vintage projector left panel (B&W) ===== */
+.ehs-story .projector{position:relative;width:210px;margin:0 0 24px;}
+.ehs-story .cam{--body:#d0d4d9;--body2:#b3b8bf;--body3:#9aa0a8;--metal:#e6e9ed;--metal2:#cfd3d9;--ink:#14110f;--glow:#1A6BCC;--bg:#ffffff;width:100%;height:auto;display:block;overflow:visible;}
+.ehs-story .cam .reel{transform-box:fill-box;transform-origin:center;transform:rotate(calc(var(--s,0)*0.5deg));}
+.ehs-story .cam .reel.rev{transform:rotate(calc(var(--s,0)*-0.5deg));}
+.ehs-story .lensglow{position:absolute;right:-6px;top:39%;width:34px;height:34px;border-radius:50%;transform:translateY(-50%);background:radial-gradient(circle,#1A6BCC,transparent 70%);opacity:.5;filter:blur(3px);pointer-events:none;}
+.ehs-story .beam{position:absolute;left:95%;top:39%;width:170px;height:130px;transform:translateY(-50%);clip-path:polygon(0 42%,100% 8%,100% 92%,0 58%);background:linear-gradient(90deg,rgba(26,107,204,.18),transparent 84%);filter:blur(2px);pointer-events:none;}
+@media(max-width:820px){.ehs-story .projector{width:150px;margin:0 auto 16px;} .ehs-story .beam,.ehs-story .lensglow{display:none;}}
+</style>
+<style>
+/* ===== Our Story — DARK (Option E: navy→black, blue beam) ===== */
+.ehs-story{background:linear-gradient(180deg,#0f1626,#080a10) !important;position:relative;color:#c7cfda;padding-top:96px;padding-bottom:96px;}
+/* header */
+.ehs-story .sec-head h2{color:#f2f5fb;}
+.ehs-story .sec-head .eyebrow{color:#7fb1f2;}
+/* morphing year + title */
+.ehs-story .bigyr{color:#f2f5fb;}
+.ehs-story .bigttl{color:#7fb1f2;}
+/* rail */
+.ehs-story .track{background:rgba(255,255,255,.14);}
+.ehs-story .mk{color:#8a93a3;}
+.ehs-story .mk.on{color:#f2f5fb;}
+.ehs-story .mk::before{background:#0f1420;border-color:rgba(255,255,255,.24);}
+.ehs-story .mk.on::before{background:#7fb1f2;border-color:#7fb1f2;box-shadow:0 0 0 4px rgba(127,177,242,.22);}
+/* entries */
+.ehs-story .e-yr{color:#7fb1f2;}
+.ehs-story .e-ttl{color:#f2f5fb;}
+.ehs-story .e-body{color:#aeb7c6;}
+.ehs-story .quote{border-left-color:#7fb1f2;}
+.ehs-story .quote p{color:#e2e8f2;}
+.ehs-story .who{color:#f2f5fb;}
+.ehs-story .role{color:#8a93a3;}
+.ehs-story .photos figcaption{color:#8a93a3;}
+/* projector on dark */
+.ehs-story .cam{--body:#c7ccd3;--body2:#a9afb8;--body3:#8c929b;--metal:#e0e3e8;--metal2:#c9cdd4;--ink:#0f1116;--glow:#7fb1f2;--bg:#121826;}
+.ehs-story .lensglow{background:radial-gradient(circle,#7fb1f2,transparent 70%);opacity:.65;}
+.ehs-story .beam{background:linear-gradient(90deg,rgba(120,170,255,.30),transparent 84%);}
+</style>
 </head>
 <body>
 
@@ -366,7 +405,30 @@
   </div>
   <div class="wrap">
     <aside class="aside">
-      <p class="bigyr" data-bigyr>2012</p>
+      <div class="projector">
+        <svg class="cam" viewBox="0 0 460 600" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="var(--body3)" stroke-width="11" stroke-linecap="round" fill="none"><path d="M205 362 L118 560"/><path d="M236 362 L344 552"/><path d="M221 366 L224 568"/></g>
+          <g fill="var(--metal)" stroke="var(--body3)" stroke-width="4"><ellipse cx="116" cy="566" rx="17" ry="7"/><ellipse cx="346" cy="558" rx="17" ry="7"/><ellipse cx="224" cy="574" rx="17" ry="7"/></g>
+          <path d="M186 330 h68 l-8 34 h-52 z" fill="var(--body2)" stroke="var(--ink)" stroke-width="4"/>
+          <path d="M198 322 h60 v14 h-60 z" fill="var(--metal)" stroke="var(--ink)" stroke-width="4"/>
+          <g class="reel"><circle cx="120" cy="92" r="63" fill="var(--body)" stroke="var(--ink)" stroke-width="7"/><circle cx="120" cy="92" r="52" fill="none" stroke="var(--ink)" stroke-width="3"/><g fill="var(--bg)" stroke="var(--ink)" stroke-width="3"><circle cx="154" cy="92" r="15"/><circle cx="137" cy="121" r="15"/><circle cx="103" cy="121" r="15"/><circle cx="86" cy="92" r="15"/><circle cx="103" cy="63" r="15"/><circle cx="137" cy="63" r="15"/></g><circle cx="120" cy="92" r="15" fill="var(--metal)" stroke="var(--ink)" stroke-width="5"/><circle cx="120" cy="92" r="4" fill="var(--ink)"/></g>
+          <g class="reel rev"><circle cx="278" cy="86" r="63" fill="var(--body)" stroke="var(--ink)" stroke-width="7"/><circle cx="278" cy="86" r="52" fill="none" stroke="var(--ink)" stroke-width="3"/><g fill="var(--bg)" stroke="var(--ink)" stroke-width="3"><circle cx="312" cy="86" r="15"/><circle cx="295" cy="115" r="15"/><circle cx="261" cy="115" r="15"/><circle cx="244" cy="86" r="15"/><circle cx="261" cy="57" r="15"/><circle cx="295" cy="57" r="15"/></g><circle cx="278" cy="86" r="15" fill="var(--metal)" stroke="var(--ink)" stroke-width="5"/><circle cx="278" cy="86" r="4" fill="var(--ink)"/></g>
+          <path d="M100 152 L322 152 L350 126 L128 126 Z" fill="var(--body2)" stroke="var(--ink)" stroke-width="6"/>
+          <path d="M322 152 L350 126 L350 306 L322 332 Z" fill="var(--body3)" stroke="var(--ink)" stroke-width="6"/>
+          <rect x="100" y="152" width="222" height="180" rx="12" fill="var(--body)" stroke="var(--ink)" stroke-width="7"/>
+          <rect x="188" y="182" width="72" height="72" rx="7" fill="none" stroke="var(--ink)" stroke-width="5"/>
+          <g stroke="var(--ink)" stroke-width="6" stroke-linecap="round"><line x1="204" y1="276" x2="252" y2="276"/><line x1="204" y1="292" x2="252" y2="292"/><line x1="204" y1="308" x2="252" y2="308"/></g>
+          <path d="M100 264 L68 288 L70 318" fill="none" stroke="var(--body3)" stroke-width="9" stroke-linecap="round"/>
+          <rect x="58" y="316" width="26" height="14" rx="7" fill="var(--metal)" stroke="var(--ink)" stroke-width="5"/>
+          <path d="M350 210 L414 202 L414 274 L350 266 Z" fill="var(--metal)" stroke="var(--ink)" stroke-width="6"/>
+          <path d="M414 196 L446 188 L446 288 L414 280 Z" fill="var(--metal2)" stroke="var(--ink)" stroke-width="6"/>
+          <ellipse cx="446" cy="238" rx="11" ry="50" fill="var(--glow)" stroke="var(--ink)" stroke-width="6"/>
+          <ellipse cx="444" cy="222" rx="4" ry="16" fill="#fff" opacity=".5"/>
+        </svg>
+        <div class="lensglow"></div>
+        <div class="beam"></div>
+      </div>
+            <p class="bigyr" data-bigyr>2012</p>
       <p class="bigttl" data-bigttl>The Spark</p>
       <nav class="rail">
         <div class="track"><div class="fill" data-fill></div></div>
@@ -580,5 +642,6 @@
   });
 })();
 </script>
+<script>addEventListener('scroll',function(){document.documentElement.style.setProperty('--s',window.scrollY|0);},{passive:true});</script>
 </body>
 </html>
