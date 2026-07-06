@@ -354,6 +354,14 @@
 .ehs-team .teamph,
 .masterminds .member{border-radius:0;}
 </style>
+<style>
+/* Our Story = full-width sticky image; the story scrolls over it */
+.ehs-story{position:relative;padding-top:0 !important;padding-bottom:0 !important;}
+.ehs-story .story-bg{position:sticky;top:0;height:100vh;z-index:0;overflow:hidden;background:url('images/story-bg.webp') center/cover,#0a0d16;}
+.ehs-story .story-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,8,14,.48),rgba(6,8,14,.72));}
+.ehs-story .story-content{position:relative;z-index:1;margin-top:-100vh;padding:110px 0;}
+</style>
+<style>.ehs-story .wrap{grid-template-columns:1fr;}</style>
 </head>
 <body>
 
@@ -363,6 +371,7 @@
   <div class="scrim"></div>
   <div class="blend"></div>
   <div class="in">
+    <p class="ey">The EduHubSpot story</p>
     <h1>We are Mentors,<br>Not Instructors</h1>
     <div class="rule"></div>
     <p>At EduHubSpot, we’re more than a training provider — you get mentorship from real project leaders who’ve been where you are, and can show you the fastest path to success.</p>
@@ -423,46 +432,12 @@
 
 <!-- ================= OUR STORY ================= -->
 <section class="ehs-story" data-sticky>
+  <div class="story-bg"></div>
+  <div class="story-content">
   <div class="sec-head">
     <h2>Our story</h2>
   </div>
   <div class="wrap">
-    <aside class="aside">
-      <div class="projector">
-        <svg class="cam" viewBox="0 0 460 600" xmlns="http://www.w3.org/2000/svg">
-          <g stroke="var(--body3)" stroke-width="11" stroke-linecap="round" fill="none"><path d="M205 362 L118 560"/><path d="M236 362 L344 552"/><path d="M221 366 L224 568"/></g>
-          <g fill="var(--metal)" stroke="var(--body3)" stroke-width="4"><ellipse cx="116" cy="566" rx="17" ry="7"/><ellipse cx="346" cy="558" rx="17" ry="7"/><ellipse cx="224" cy="574" rx="17" ry="7"/></g>
-          <path d="M186 330 h68 l-8 34 h-52 z" fill="var(--body2)" stroke="var(--ink)" stroke-width="4"/>
-          <path d="M198 322 h60 v14 h-60 z" fill="var(--metal)" stroke="var(--ink)" stroke-width="4"/>
-          <g class="reel"><circle cx="120" cy="92" r="63" fill="var(--body)" stroke="var(--ink)" stroke-width="7"/><circle cx="120" cy="92" r="52" fill="none" stroke="var(--ink)" stroke-width="3"/><g fill="var(--bg)" stroke="var(--ink)" stroke-width="3"><circle cx="154" cy="92" r="15"/><circle cx="137" cy="121" r="15"/><circle cx="103" cy="121" r="15"/><circle cx="86" cy="92" r="15"/><circle cx="103" cy="63" r="15"/><circle cx="137" cy="63" r="15"/></g><circle cx="120" cy="92" r="15" fill="var(--metal)" stroke="var(--ink)" stroke-width="5"/><circle cx="120" cy="92" r="4" fill="var(--ink)"/></g>
-          <g class="reel rev"><circle cx="278" cy="86" r="63" fill="var(--body)" stroke="var(--ink)" stroke-width="7"/><circle cx="278" cy="86" r="52" fill="none" stroke="var(--ink)" stroke-width="3"/><g fill="var(--bg)" stroke="var(--ink)" stroke-width="3"><circle cx="312" cy="86" r="15"/><circle cx="295" cy="115" r="15"/><circle cx="261" cy="115" r="15"/><circle cx="244" cy="86" r="15"/><circle cx="261" cy="57" r="15"/><circle cx="295" cy="57" r="15"/></g><circle cx="278" cy="86" r="15" fill="var(--metal)" stroke="var(--ink)" stroke-width="5"/><circle cx="278" cy="86" r="4" fill="var(--ink)"/></g>
-          <path d="M100 152 L322 152 L350 126 L128 126 Z" fill="var(--body2)" stroke="var(--ink)" stroke-width="6"/>
-          <path d="M322 152 L350 126 L350 306 L322 332 Z" fill="var(--body3)" stroke="var(--ink)" stroke-width="6"/>
-          <rect x="100" y="152" width="222" height="180" rx="12" fill="var(--body)" stroke="var(--ink)" stroke-width="7"/>
-          <rect x="188" y="182" width="72" height="72" rx="7" fill="none" stroke="var(--ink)" stroke-width="5"/>
-          <g stroke="var(--ink)" stroke-width="6" stroke-linecap="round"><line x1="204" y1="276" x2="252" y2="276"/><line x1="204" y1="292" x2="252" y2="292"/><line x1="204" y1="308" x2="252" y2="308"/></g>
-          <path d="M100 264 L68 288 L70 318" fill="none" stroke="var(--body3)" stroke-width="9" stroke-linecap="round"/>
-          <rect x="58" y="316" width="26" height="14" rx="7" fill="var(--metal)" stroke="var(--ink)" stroke-width="5"/>
-          <path d="M350 210 L414 202 L414 274 L350 266 Z" fill="var(--metal)" stroke="var(--ink)" stroke-width="6"/>
-          <path d="M414 196 L446 188 L446 288 L414 280 Z" fill="var(--metal2)" stroke="var(--ink)" stroke-width="6"/>
-          <ellipse cx="446" cy="238" rx="11" ry="50" fill="var(--glow)" stroke="var(--ink)" stroke-width="6"/>
-          <ellipse cx="444" cy="222" rx="4" ry="16" fill="#fff" opacity=".5"/>
-        </svg>
-        <div class="lensglow"></div>
-        <div class="beam"></div>
-      </div>
-            <p class="bigyr" data-bigyr>2012</p>
-      <p class="bigttl" data-bigttl>The Spark</p>
-      <nav class="rail">
-        <div class="track"><div class="fill" data-fill></div></div>
-        <p class="mk on" data-nav>2012 &middot; The Spark</p>
-        <p class="mk" data-nav>2013 &middot; The Struggle</p>
-        <p class="mk" data-nav>2016 &middot; EduHubSpot is Born</p>
-        <p class="mk" data-nav>2017 &middot; The First Class</p>
-        <p class="mk" data-nav>2020 &middot; Going Global</p>
-        <p class="mk" data-nav>Today &middot; Still Building</p>
-      </nav>
-    </aside>
     <div class="entries">
 
       <article class="entry" data-entry data-year="2012" data-title="The Spark">
@@ -533,6 +508,7 @@
       </article>
 
     </div>
+  </div>
   </div>
 </section>
 
