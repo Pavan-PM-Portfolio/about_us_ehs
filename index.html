@@ -389,8 +389,22 @@ html{scroll-snap-type:y proximity;}
 <style>
 /* Our Story intro header */
 .story-intro{background:#fff;text-align:center;padding:96px 24px 44px;}
-.story-intro h2{font-family:'Fraunces',Georgia,serif;font-size:clamp(34px,4.6vw,58px);font-weight:500;color:#14110f;margin:0 0 20px;line-height:1.04;letter-spacing:-.01em;}
+.story-intro h2{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:clamp(30px,4vw,50px);font-weight:800;color:#111722;margin:0 0 18px;line-height:1.06;letter-spacing:-.025em;}
+.story-intro h2 .acc{color:#1A6BCC;}
 .story-intro p{font-size:clamp(16px,1.4vw,19px);line-height:1.65;color:#5b6472;margin:0 auto;max-width:660px;}
+</style>
+<style>
+/* film countdown leader (opening) */
+.ehs-story .screen-era.leader{background:#0a0b10;display:grid;place-items:center;}
+.ehs-story .leader-frame{position:relative;width:min(42%,160px);aspect-ratio:1;}
+.ehs-story .leader-sweep{position:absolute;inset:0;border-radius:50%;background:conic-gradient(rgba(255,255,255,.28) 0deg,rgba(255,255,255,0) 95deg);}
+.ehs-story .screen-era.leader.active .leader-sweep{animation:leaderspin 1.1s linear infinite;}
+.ehs-story .leader-cross{position:absolute;inset:0;}
+.ehs-story .leader-cross::before,.ehs-story .leader-cross::after{content:"";position:absolute;background:rgba(255,255,255,.4);}
+.ehs-story .leader-cross::before{left:50%;top:-12%;bottom:-12%;width:1px;transform:translateX(-50%);}
+.ehs-story .leader-cross::after{top:50%;left:-12%;right:-12%;height:1px;transform:translateY(-50%);}
+.ehs-story .leader-num{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;font-family:'Fraunces',Georgia,serif;font-size:clamp(40px,6vw,86px);font-weight:500;color:#fff;}
+@keyframes leaderspin{to{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
@@ -462,16 +476,23 @@ html{scroll-snap-type:y proximity;}
 
 <!-- ================= OUR STORY ================= -->
 <section class="story-intro">
-  <h2>Lights. Camera. Transformation.</h2>
+  <h2>Lights. Camera. <span class="acc">Transformation.</span></h2>
   <p>Every successful career has a beginning. Ours started with a vision—to make world-class professional education accessible, practical, and career-changing for everyone.</p>
 </section>
 <section class="ehs-story pinned" data-pin>
-  <div class="snap" style="top:66.7vh"></div><div class="snap" style="top:200vh"></div><div class="snap" style="top:333.3vh"></div><div class="snap" style="top:466.7vh"></div><div class="snap" style="top:600vh"></div><div class="snap" style="top:733.3vh"></div>
+  <div class="snap" style="top:57.1vh"></div><div class="snap" style="top:171.4vh"></div><div class="snap" style="top:285.7vh"></div><div class="snap" style="top:400vh"></div><div class="snap" style="top:514.3vh"></div><div class="snap" style="top:628.6vh"></div><div class="snap" style="top:742.9vh"></div>
   <div class="story-pin">
     <div class="story-scene">
       <div class="story-bg"></div>
       <div class="screen">
-        <div class="screen-era one active"><img src="images/story-2012-pmp.webp" alt=""></div>
+        <div class="screen-era leader active">
+          <div class="leader-frame">
+            <div class="leader-sweep"></div>
+            <div class="leader-cross"></div>
+            <span class="leader-num">3</span>
+          </div>
+        </div>
+        <div class="screen-era one"><img src="images/story-2012-pmp.webp" alt=""></div>
         <div class="screen-era bento"><img class="b1" src="images/story-2013-1.webp" alt=""><img src="images/story-2013-2.webp" alt=""><img src="images/story-2013-3.webp" alt=""></div>
         <div class="screen-era stack"><img class="s1" src="images/story-2016-studio.webp" alt=""><img src="images/story-2016-coding.webp" alt=""><img src="images/story-2016-3.webp" alt=""></div>
         <div class="screen-era one"><img src="images/story-2017-firstclass.webp" alt=""></div>
@@ -479,7 +500,8 @@ html{scroll-snap-type:y proximity;}
         <div class="screen-era one"><img src="images/story-today-studio.webp" alt=""></div>
       </div>
       <div class="subs">
-        <p class="sub active"><span class="yr">2012 · The Spark</span><span class="h">Where it all began</span><span class="b">It started in 2012 with one goal: pass the PMP. Varun — the son of a retired mathematics professor — was in his late twenties when he cleared it. The celebration was simple and unforgettable, and with it came a quiet realisation: this exam wasn’t the finish line. It was the start of everything.</span></p>
+        <p class="sub active"><span class="yr">Now showing</span><span class="h">The EduHubSpot Story</span><span class="b">A story in six chapters — from one exam to a global classroom. Scroll to begin the reel.</span></p>
+        <p class="sub"><span class="yr">2012 · The Spark</span><span class="h">Where it all began</span><span class="b">It started in 2012 with one goal: pass the PMP. Varun — the son of a retired mathematics professor — was in his late twenties when he cleared it. The celebration was simple and unforgettable, and with it came a quiet realisation: this exam wasn’t the finish line. It was the start of everything.</span></p>
         <p class="sub"><span class="yr">2013 · The Struggle</span><span class="h">’Varun, you’re too young’</span><span class="b">Certification in hand, Varun knocked on the door of every training company he could find — and was turned away, again and again: too young. He refused to give up. A year later a call finally came, and he delivered his first-ever training in Cleveland, Ohio. The students loved it. He never got paid, but he kept teaching anyway — he wasn’t chasing a paycheck yet, he was building a name.</span></p>
         <p class="sub"><span class="yr">2016 · EduHubSpot is Born</span><span class="h">Two friends, one vision</span><span class="b">The money was coming, but Varun wanted to build something that would outlast him — and he couldn’t do it alone. He sat down with his best friend and roommate Chirag, a software developer, and EduHubSpot was born. Chirag got his hands dirty in the code; Varun recorded lesson after lesson in a green-screen studio they rigged up in their own basement. From that basement, the first thousands of students found them.</span></p>
         <p class="sub"><span class="yr">2017 · The First Class</span><span class="h">The first class</span><span class="b">Before the studio and the thousands online, there was one small room — a projector, a stack of PMP guides, and a handful of people who took a chance on a brand-new name. When they held up their certificates, EduHubSpot stopped being an idea. It became a school.</span></p>
@@ -631,6 +653,7 @@ document.querySelectorAll('[data-pin]').forEach(function(sec){
   var eras=[].slice.call(sec.querySelectorAll('.screen-era'));
   var subs=[].slice.call(sec.querySelectorAll('.sub'));
   var n=eras.length;
+  var leaderNum=sec.querySelector(".leader-num"); var cd=null; var cdi=0; var cvals=["3","2","1"];
   function upd(){
     var r=sec.getBoundingClientRect();
     var total=r.height-window.innerHeight;
@@ -639,6 +662,7 @@ document.querySelectorAll('[data-pin]').forEach(function(sec){
     var i=Math.min(n-1,Math.floor(p*n));
     eras.forEach(function(e,k){e.classList.toggle('active',k===i);});
     subs.forEach(function(e,k){e.classList.toggle('active',k===i);});
+    if(i===0){ if(!cd&&leaderNum){ cdi=0; leaderNum.textContent=cvals[0]; cd=setInterval(function(){ cdi++; if(cdi<3){ leaderNum.textContent=cvals[cdi]; } else { clearInterval(cd); cd=null; var a=sec.querySelectorAll('.snap'); if(a[1]){ window.scrollTo({top:a[1].getBoundingClientRect().top+window.scrollY, behavior:'smooth'}); } } },850); } } else if(cd){ clearInterval(cd); cd=null; }
   }
   window.addEventListener('scroll',upd,{passive:true});
   window.addEventListener('resize',upd);
