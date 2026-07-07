@@ -387,13 +387,6 @@ html{scroll-snap-type:y proximity;}
 
 </style>
 <style>
-/* Our Story intro header */
-.story-intro{background:#fff;text-align:center;padding:96px 24px 44px;}
-.story-intro h2{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:clamp(30px,4vw,50px);font-weight:800;color:#111722;margin:0 0 18px;line-height:1.06;letter-spacing:-.025em;}
-.story-intro h2 .acc{color:#1A6BCC;}
-.story-intro p{font-size:clamp(16px,1.4vw,19px);line-height:1.65;color:#5b6472;margin:0 auto;max-width:660px;}
-</style>
-<style>
 /* film countdown leader (opening) */
 .ehs-story .screen-era.leader{background:#0a0b10;display:grid;place-items:center;}
 .ehs-story .leader-frame{position:relative;width:min(42%,160px);aspect-ratio:1;}
@@ -405,6 +398,13 @@ html{scroll-snap-type:y proximity;}
 .ehs-story .leader-cross::after{top:50%;left:-12%;right:-12%;height:1px;transform:translateY(-50%);}
 .ehs-story .leader-num{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;font-family:'Fraunces',Georgia,serif;font-size:clamp(40px,6vw,86px);font-weight:500;color:#fff;}
 @keyframes leaderspin{to{transform:rotate(360deg)}}
+</style>
+<style>
+/* Our Story header (inside the scene, top) */
+.ehs-story .story-header{position:absolute;left:0;right:0;top:2.5%;z-index:3;text-align:center;padding:0 6%;}
+.ehs-story .story-header h2{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:clamp(20px,2.4vw,34px);font-weight:800;color:#111722;margin:0 0 5px;letter-spacing:-.02em;line-height:1.1;}
+.ehs-story .story-header h2 .acc{color:#1A6BCC;}
+.ehs-story .story-header p{font-size:clamp(12px,1vw,15px);color:#5b6472;margin:0;}
 </style>
 </head>
 <body>
@@ -475,15 +475,15 @@ html{scroll-snap-type:y proximity;}
 </section>
 
 <!-- ================= OUR STORY ================= -->
-<section class="story-intro">
-  <h2>Lights. Camera. <span class="acc">Transformation.</span></h2>
-  <p>Every successful career has a beginning. Ours started with a vision—to make world-class professional education accessible, practical, and career-changing for everyone.</p>
-</section>
 <section class="ehs-story pinned" data-pin>
   <div class="snap" style="top:57.1vh"></div><div class="snap" style="top:171.4vh"></div><div class="snap" style="top:285.7vh"></div><div class="snap" style="top:400vh"></div><div class="snap" style="top:514.3vh"></div><div class="snap" style="top:628.6vh"></div><div class="snap" style="top:742.9vh"></div>
   <div class="story-pin">
     <div class="story-scene">
       <div class="story-bg"></div>
+      <div class="story-header">
+        <h2>Lights. Camera. <span class="acc">Transformation.</span></h2>
+        <p>Every successful career has a beginning.</p>
+      </div>
       <div class="screen">
         <div class="screen-era leader active">
           <div class="leader-frame">
@@ -654,7 +654,7 @@ document.querySelectorAll('[data-pin]').forEach(function(sec){
   var subs=[].slice.call(sec.querySelectorAll('.sub'));
   var n=eras.length;
   var leaderNum=sec.querySelector(".leader-num"); var cd=null; var cdi=0; var cvals=["3","2","1"]; var settle=null;
-  function startCountdown(){ if(cd||!leaderNum)return; cdi=0; leaderNum.textContent=cvals[0]; cd=setInterval(function(){ cdi++; if(cdi<3){ leaderNum.textContent=cvals[cdi]; } else { clearInterval(cd); cd=null; var a=sec.querySelectorAll(".snap"); if(a[1]){ window.scrollTo({top:a[1].getBoundingClientRect().top+window.scrollY, behavior:"smooth"}); } } },950); }
+  function startCountdown(){ if(cd||!leaderNum)return; cdi=0; leaderNum.textContent=cvals[0]; cd=setInterval(function(){ cdi++; if(cdi<3){ leaderNum.textContent=cvals[cdi]; } else { clearInterval(cd); cd=null; var a=sec.querySelectorAll(".snap"); if(a[1]){ window.scrollTo({top:a[1].getBoundingClientRect().top+window.scrollY, behavior:"smooth"}); } } },500); }
   function upd(){
     var r=sec.getBoundingClientRect();
     var total=r.height-window.innerHeight;
